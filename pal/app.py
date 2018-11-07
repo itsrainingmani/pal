@@ -7,6 +7,12 @@ LICENSE_FILE = "data/license-list.json"
 def get_license_file_path():
     projectPath = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     licensePath = os.path.join(projectPath, LICENSE_FILE)
+
+    # Check if the license list file exists
+    # If not, raise FileNotFoundError
+    if not os.path.isfile(licensePath):
+        raise FileNotFoundError
+
     return licensePath
 
 
