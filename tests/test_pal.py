@@ -1,10 +1,17 @@
 # Content of test_helpers.py
 
+import sys
 import pal.app as pal
+from pathlib import Path
 
 
 def test_get_license_file_path():
-    testPath = "/home/zeus/repos/pal/data/license-list.json"
+    homePath = str(Path.home())
+    if sys.platform.startswith("linux"):
+        # Linux-specific path
+        testPath = homePath + "/repos/pal/data/license-list.json"
+    elif sys.platform.startswith("win"):
+        testPath = homePath + "\\dev\\pal\\data/license-list.json"
     assert testPath == pal.get_license_file_path()
 
 
