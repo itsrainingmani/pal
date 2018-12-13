@@ -10,6 +10,8 @@ help:
 	@echo "    run tests"
 	@echo "make run"
 	@echo "    run project"
+	@echo "make lint"
+	@echo "    lint the source files using flake8"
 
 init:
 	pipenv install
@@ -21,4 +23,4 @@ run:
 	pipenv run python pal/app.py
 
 lint:
-	pipenv run flake8 pal/*
+	pipenv run flake8
