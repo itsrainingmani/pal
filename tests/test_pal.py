@@ -34,4 +34,3 @@ def test_retrieve_license_list():
     )
 
     assert testLicenseList == pal.retrieve_license_list()
-

@@ -3,6 +3,7 @@ import json
 
 LICENSE_FILE = "data/license-list.json"
 
+
 # Function to get the path of the License Path
 def get_license_file_path():
     projectPath = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
