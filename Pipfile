@@ -7,6 +7,7 @@ name = "pypi"
 requests = ">=2.20.0"
 pytest = "*"
 "flake8" = "*"
+click = "*"
 
 [dev-packages]
 black = "==18.9b0"
