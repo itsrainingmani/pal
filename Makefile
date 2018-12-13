@@ -4,14 +4,10 @@ TEST_PATH=./tests
 
 .DEFAULT: help
 help:
-	@echo "make init"
-	@echo "    Setup environment from Pipfile using pipenv"
-	@echo "make test"
-	@echo "    run tests"
-	@echo "make run"
-	@echo "    run project"
-	@echo "make lint"
-	@echo "    lint the source files using flake8"
+	@echo "make init - Setup environment from Pipfile using pipenv"
+	@echo "make test - Run tests"
+	@echo "make run  - Run project"
+	@echo "make lint - Lint the source files using flake8"
 
 init:
 	pipenv install
